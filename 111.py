@@ -1,0 +1,36 @@
+print('Cálculo Salarial')
+h=int(input('Insira o número de horas trabalhadas: '))
+v=float(input('Insira o valor da sua hora trabalhada: '))
+salario_bruto=(h*v)
+FGTS=(h*v)*0.11
+INSS=(h*v)*0.1
+if salario_bruto<=900:
+    print('Salário Bruto:',salario_bruto,'R$')
+    print('(-)INSS(10%):',INSS,'R$')
+    print('FGTS(11%):',FGTS,'R$')
+    print('Total de Descontos:',INSS,'R$')
+    print('Salário Líquido:',salario_bruto-INSS,'R$')
+elif salario_bruto<=1500:
+    print('Salário Bruto:', salario_bruto, 'R$')
+    IR=(salario_bruto*0.05)
+    print('(-) IR(%5):',IR)
+    print('(-) INSS(10%):', INSS, 'R$')
+    print('FGTS (11%):', FGTS, 'R$')
+    print('Total de Descontos:', INSS,IR, 'R$')
+    print('Salário Líquido:', salario_bruto - INSS-IR, 'R$')
+elif salario_bruto<=2500:
+    print('Salário Bruto:', salario_bruto, 'R$')
+    IR = (salario_bruto * 0.1)
+    print('(-) IR(%10):', IR)
+    print('(-) INSS(10%):', INSS, 'R$')
+    print('FGTS (11%):', FGTS, 'R$')
+    print('Total de Descontos:', INSS, IR, 'R$')
+    print('Salário Líquido:', salario_bruto - INSS - IR, 'R$')
+elif salario_bruto>2500:
+    print('Salário Bruto:', salario_bruto, 'R$')
+    IR = (salario_bruto * 0.2)
+    print('(-) IR(%20):', IR)
+    print('(-) INSS(10%):', INSS, 'R$')
+    print('FGTS (11%):', FGTS, 'R$')
+    print('Total de Descontos:', INSS, IR, 'R$')
+    print('Salário Líquido:', salario_bruto - INSS - IR, 'R$')
